@@ -13,6 +13,7 @@
 #gameContainer {
     font-family: system-ui, sans-serif;
     text-align: center;
+    color: rgb(81, 0, 151);
 }
 
 #cellContainer {
@@ -20,6 +21,9 @@
     grid-template-columns: repeat(3, auto);
     width: 255px;
     margin: auto;
+    background: #d9d9d9;
+    padding: 20px;
+    border-radius: 30px;
 }
 
 #restartBtn {

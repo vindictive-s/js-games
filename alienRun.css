@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#game {
+    width: 500px;
+    height: 200px;
+    border: 1px solid black;
+    background-image: url("background.png");
+}
+
+#character {
+    width: 25px;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+    top: 120px;
+    left: 10px;
+}
+
+.character-spriteSheet {
+    animation: moveSpriteSheet 500ms steps(4) infinite;
+}
+
+@keyframes moveSpriteSheet {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+    to {
+        transform: translate3d(-117%, 0, 0);
+    }
+}
+
+.animate {
+    animation: jump 500ms;
+}
+
+@keyframes jump {
+    0% {
+        top: 120px;
+    }
+    30% {
+        top: 80px;
+    }
+    70% {
+        top: 80px;
+    }
+    100% {
+        top: 120px;
+    }
+}
+
+#block {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 92px;
+    left: 480px;
+    animation: block 1.8s infinite linear;
+}
+
+@keyframes block {
+    0% {
+        left: 480px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+#result {
+    width: 300px;
+    height: 150px;
+    background-color: blueviolet;
+    position: relative;
+    top: -25px;
+    left: 100px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+h1, h2 {
+    font-family: system-ui;
+    text-align: center;
+    color: white;
+}
+
+h3 {
+    font-family: system-ui;
+    padding: 10px;
+}
+
+#reset {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    margin-top: 20px;
+    color: white;
+}
